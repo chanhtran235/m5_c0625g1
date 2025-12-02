@@ -17,3 +17,11 @@ const studentList = [
 export function getAll(){
     return [...studentList];
 }
+export function deleteById(id){
+    for (let i = 0; i <studentList.length ; i++) {
+        if (studentList[i].id==id){
+            studentList.splice(i,1);
+            break;
+        }
+    }
+}

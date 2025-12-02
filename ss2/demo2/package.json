@@ -1,5 +1,5 @@
 {
-  "name": "demo1",
+  "name": "demo2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "5.2",
     "react": "^19.2.0",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
