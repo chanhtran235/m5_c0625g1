@@ -15,9 +15,17 @@ const studentList = [
 ]
 // viết phương thức để callAPI
 export function getAll(){
+    // call API
     return [...studentList];
 }
+
+export function addNew(student){
+    // call API
+    studentList.push(student);
+}
+
 export function deleteById(id){
+    // call API
     for (let i = 0; i <studentList.length ; i++) {
         if (studentList[i].id==id){
             studentList.splice(i,1);

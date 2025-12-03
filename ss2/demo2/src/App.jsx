@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeadComponent from "./component/HeadComponent.jsx";
 import "bootstrap/dist/css/bootstrap.css"
-import ListClassComponent from "./component/ListClassComponent.jsx";
+import ListComponent from "./component/ListComponent.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
      <HeadComponent/>
-        <ListClassComponent/>
+        <ListComponent/>
     </>
   )
 }

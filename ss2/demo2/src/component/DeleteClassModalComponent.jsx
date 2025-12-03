@@ -16,6 +16,7 @@ class DeleteClassModalComponent extends Component{
     handleDelete=()=>{
 
         deleteById(this.props.deleteStudent.id);
+        console.log(getAll());
         this.props.closeModal();
         // xoá
     }
@@ -29,14 +30,14 @@ class DeleteClassModalComponent extends Component{
                         <Modal.Title>Modal heading</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        Bạn muốn xoá sinh viên {this.props.deleteStudent.id}
+                        Bạn muốn xoá sinh viên <span className={'text-danger'}>{this.props.deleteStudent.name}</span>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.handleClose}>
                             Close
                         </Button>
-                        <Button variant="primary" onClick={this.handleDelete}>
-                            Save Changes
+                        <Button variant="danger" onClick={this.handleDelete}>
+                            Delete
                         </Button>
                     </Modal.Footer>
                 </Modal>
