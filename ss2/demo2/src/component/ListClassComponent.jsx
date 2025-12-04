@@ -50,7 +50,7 @@ class ListClassComponent extends Component{
         console.log("-------list render --------------")
         return (
             <>
-                <h1 style={{color:"yellow"}}>Danh sách sinh viên</h1>
+                <h1>Danh sách sinh viên</h1>
                 <table className="table table-dark">
                     <thead>
                     <tr>

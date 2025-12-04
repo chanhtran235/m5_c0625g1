@@ -1,6 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import {addNew, getAll} from "../service/studentService.js";
 import DeleteComponent from "./DeleteComponent.jsx";
+import {Link} from "react-router";
 
 
 const ListComponent = () => {
@@ -10,8 +11,7 @@ const ListComponent = () => {
     const [showModal, setShowModal] = useState(false);
     const [reloading, setReloading] = useState(false);
 
-    const idRef = useRef(null);
-    const nameRef = useRef(null);
+
     useEffect(() => {
         console.log("----effect---run---")
         setStudentList(getAll())
@@ -25,28 +25,12 @@ const ListComponent = () => {
         setReloading(pre => !pre);
         setShowModal(false);
     }
-    const handleAdd = () => {
-        const id = idRef.current.value;
-        const name = nameRef.current.value;
-        const newStudent = {
-            id: id,
-            name: name
-        }
-        addNew(newStudent);
-        console.log(getAll());
-        setReloading(pre => !pre);
-
-    }
 
     return (
         <>
             {console.log("-------list----------")}
-            <form>
-                ID: <input ref={idRef} name={"id"}/>
-                Name: <input ref={nameRef} name={"name"}/>
-                <button onClick={handleAdd} type={'button'}>Thêm mới</button>
-            </form>
-            <h1 style={{color: "yellow"}}>Danh sách sinh viên</h1>
+            <Link className="btn btn-sm btn-success" to="/students/add">Thêm mới</Link>
+            <h1 style={{color: "red"}}>Danh sách sinh viên</h1>
             <table className="table table-dark">
                 <thead>
                 <tr>

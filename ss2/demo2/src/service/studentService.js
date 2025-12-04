@@ -16,6 +16,7 @@ const studentList = [
 // viết phương thức để callAPI
 export function getAll(){
     // call API
+    //axios để call API
     return [...studentList];
 }
 
