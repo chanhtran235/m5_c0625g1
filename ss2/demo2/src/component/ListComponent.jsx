@@ -14,7 +14,16 @@ const ListComponent = () => {
 
     useEffect(() => {
         console.log("----effect---run---")
-        setStudentList(getAll())
+
+        // getAll().then(data =>{
+        //     setStudentList(data);
+        // })
+        const fetData = async ()=>{
+            const data = await getAll();
+            setStudentList(data);
+        }
+        fetData();
+
     }, [reloading]);
     const handleShowModal = (student) => {
         setDeleteStudent(student);
@@ -37,6 +46,7 @@ const ListComponent = () => {
                     <td>STT</td>
                     <td>ID</td>
                     <td>Name</td>
+                    <td>Class name</td>
                     <td>Delete</td>
                 </tr>
                 </thead>
@@ -47,6 +57,7 @@ const ListComponent = () => {
                             <td>{i + 1}</td>
                             <td>{student.id}</td>
                             <td>{student.name}</td>
+                            <td>{student.classCG?.name}</td>
                             <td>
                                 <button onClick={() => {
                                     handleShowModal(student)

@@ -1,34 +1,58 @@
 {
-  "posts": [
+  "classes": [
     {
-      "id": "1",
-      "title": "a title",
-      "views": 100
+      "id": 2,
+      "name": "C07"
     },
     {
-      "id": "2",
-      "title": "another title",
-      "views": 200
+      "id": 3,
+      "name": "C08"
     },
     {
-      "title": "a titlchanhtraanf fsfsfsfsdfsde",
-      "views": 100,
-      "id": "O6b-rW4"
+      "id": 4,
+      "name": "C09"
     }
   ],
-  "comments": [
+  "students": [
     {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
+      "id": 1,
+      "name": "chánh",
+      "classCG": {
+        "id": "1",
+        "name": "C07"
+      }
     },
     {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
+      "id": 2,
+      "name": "tiến",
+      "classCG": {
+        "id": "1",
+        "name": "C07"
+      }
+    },
+    {
+      "id": 3,
+      "name": "hải",
+      "classCG": {
+        "id": "3",
+        "name": "C09"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Chanh Van",
+      "classCG": {
+        "id": 3,
+        "name": "C08"
+      }
+    },
+    {
+      "name": "Admin Nhanh",
+      "classCG": {
+        "id": 2,
+        "name": "C07"
+      },
+      "id": 7
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
